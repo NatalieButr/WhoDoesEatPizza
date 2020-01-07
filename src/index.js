@@ -9,6 +9,7 @@ load.onclick = function() {
   btntext.innerHTML = "LOADING";
   load.classList = "loading";
   waiting.style.display = "inline-block";
+  console.log('ckick')
   fetch(url)
     .then(function(items) {
       return items.json();
