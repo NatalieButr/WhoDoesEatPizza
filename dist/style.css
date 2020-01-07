@@ -1,0 +1,117 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .entry {
+      text-align: center;
+      min-height: 450px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .entry div {
+      position: absolute;
+      left: 15%;
+      top: 25%;
+  }
+  .entry div:before, .entry div:after {
+      display: block;
+      content: '';
+      position: absolute;
+  }
+  
+  #pizza {
+      background: none
+  }
+  #pizza div {
+      width: 400px;
+      height: 400px;
+      margin-left: -100px;
+      margin-top: -150px;
+      background: #d2b48c;
+      background-image: radial-gradient(circle,rgba(255,215,0,0.24) 30%,transparent 58%),radial-gradient(circle,#fffacd 55%,transparent 58%),radial-gradient(circle,#b22222 60%,transparent 61%),radial-gradient(circle,rgba(139,69,19,0.4) 58%,transparent 64%),radial-gradient(circle,transparent 66%,#8b4513 81%);
+      border-radius: 50%;
+      -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      z-index: 1;
+  }
+  #pizza div:before {
+      width: 37px;
+      height: 37px;
+      left: 145px;
+      top: 148px;
+      background: white;
+      border-radius: 50%;
+      -webkit-box-shadow: 50px -23px 0 white, 91px 20px 0 white, 36px 30px 0 white, -10px 60px 0 white, 25px 89px 0 white, 80px 80px 0 white, 20px -30px 0 -14px rgba(0,0,0,0.4), -30px 10px 0 -14px rgba(0,0,0,0.5), -5px 35px 0 -14px rgba(0,0,0,0.4), 16px 16px 0 -14px rgba(0,0,0,0.5), 90px -10px 0 -14px rgba(0,0,0,0.4), 58px 10px 0 -14px rgba(0,0,0,0.5), 60px 60px 0 -14px rgba(0,0,0,0.5), 105px 55px 0 -14px rgba(0,0,0,0.4), -5px 90px 0 -14px rgba(0,0,0,0.5), 55px 105px 0 -14px rgba(0,0,0,0.5);
+      box-shadow: 40px -100px 0 white, 160px 30px 0 white,  140px 100px 0 white, 10px -60px 0 white, -60px -40px 0 white, -60px 100px 0 white, 100px 150px 0 white, 130px -43px 0 white, -91px 10px 0 white, 40px 160px 0 white, -20px 40px 0 white,70px -43px 0 white, 101px 30px 0 white, 26px 30px 0 white, -20px 40px 0 white, 5px 119px 0 white, 80px 80px 0 white, 20px -30px 0 -14px rgba(0,0,0,0.4), -30px 10px 0 -14px rgba(0,0,0,0.5), -5px 35px 0 -14px rgba(0,0,0,0.4), 16px 16px 0 -14px rgba(0,0,0,0.5), 90px -10px 0 -14px rgba(0,0,0,0.4), 58px 10px 0 -14px rgba(0,0,0,0.5), 60px 60px 0 -14px rgba(0,0,0,0.5), 105px 55px 0 -14px rgba(0,0,0,0.4), -5px 90px 0 -14px rgba(0,0,0,0.5), 55px 105px 0 -14px rgba(0,0,0,0.5), 5px -55px 0 -14px rgba(0,0,0,0.4), -5px 50px 0 -14px rgba(0,0,0,0.5), 0px -105px 0 -14px rgba(0,0,0,0.5);
+  }
+  
+  #pizza div:after {
+      width: 30px;
+      height: 30px;
+      left: 165px;
+      top: 145px;
+      z-index: 1;
+      background: #2e8b57;
+      border-radius: 35px 5px;
+      -webkit-box-shadow: 50px 55px 0 #2e8b57, 70px -10px 0 -2px #2e8b57, -10px 80px 0 -2px #2e8b57, 40px 105px 0 -2px #2e8b57;
+      box-shadow: -10px 160px 0 #2e8b57, -110px 60px 0 #2e8b57, 120px 15px 0 #2e8b57, 150px 55px 0 #2e8b57,-50px 55px 0 #2e8b57, 0px -55px 0 #2e8b57, 50px 55px 0 #2e8b57, 70px -10px 0 -2px #2e8b57, -10px 80px 0 -2px #2e8b57, 40px 105px 0 -2px #2e8b57;
+  }
+  
+  .load {
+      width: 150px;
+      height: 50px;
+      background-color: rebeccapurple;
+      color: white ;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+  }
+  .loading {
+      width: 150px;
+      height: 50px;
+      background-color: orangered;
+      color: white ;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+  }
+  .waiting {
+      display: none;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  .slice {
+      display: inline-block;
+      position: absolute;
+      width: 1px;
+      height: 340px;
+      top:30px;
+      margin-left: 0;
+      left: 200px;
+      color: black;
+      background: #b22222;
+  }
+  
+  .name {
+      display: inline-block;
+      color: rebeccapurple;
+      font-size: 16px;
+      background: #fffacd;
+      z-index: 1;
+      margin-top: -60px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .text {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+      position: relative;
+      top: 350px;
+      left: -400px;
+  }
